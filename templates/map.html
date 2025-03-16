@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карта железных дорог Казахстана</title>
+  <!-- Leaflet стили -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    html, body, #map {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <!-- Leaflet скрипт -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Подключение map.js -->
+  <script>
+    const API_KEY = "{{ api_key }}";
+  </script>
+  <script src = {% static 'js/map.js' %}></script>
+</body>
+</html>

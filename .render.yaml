@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: your-app-name
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn station_map.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: station_,ap.settings
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: False
