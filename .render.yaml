@@ -6,7 +6,7 @@ services:
     startCommand: gunicorn station_map.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
-        value: station_,ap.settings
+        value: station_map.settings
       - key: SECRET_KEY
         generateValue: true
       - key: DEBUG
