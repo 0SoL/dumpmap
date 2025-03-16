@@ -27,6 +27,8 @@ MAP_API_KEY = "548fa8c1b8ef442eb0e0125511e8c4b6"
 DEBUG = True
 
 ALLOWED_HOSTS = ['dumpmap.onrender.com']
+if os.environ.get('RENDER'):
+    ALLOWED_HOSTS.append('.onrender.com')
 
 
 # Application definition
