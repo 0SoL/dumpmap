@@ -26,7 +26,7 @@ MAP_API_KEY = "548fa8c1b8ef442eb0e0125511e8c4b6"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dumpmap.onrender.com']
+ALLOWED_HOSTS = ['railwaymap.onrender.com']
 if os.environ.get('RENDER'):
     ALLOWED_HOSTS.append('.onrender.com')
 
