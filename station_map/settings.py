@@ -26,7 +26,7 @@ MAP_API_KEY = "548fa8c1b8ef442eb0e0125511e8c4b6"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['aa78babf4143.ngrok.app']
+ALLOWED_HOSTS = ['dumpmap.onrender.com']
 
 
 # Application definition
@@ -134,3 +134,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import dj_database_url
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
